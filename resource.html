@@ -1,105 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>
-            Roses Resources
-        </title>
-    </head>
-        <div>Menu:
-            <ul>
-                <li><a href="index.html">Home&nbsp;</a></li>
-                <li><a href="resource.html">Resources</a></li>
-            </ul>
-        </div>    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roses Resources</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="menuContainer">
+        <button id="myButton">Menu</button>  <!--added menu button-->
+        <ul id="menuList">
+
+            <li><a href="index.html">Home&nbsp;</a></li>
+            <li><a href="resource.html">Resources</a></li>
+        </ul>
+    </div>    
           
     <h1 style="color: green; background-color: pink">
         <b style="color: red">Power of the Rose</b><br>
                 
         <i>For entertainment purpose only. Always consult with a healthcare professional before using for medicinal purposes.</i>
     </h1>
-        <p>Resources available at your fingertips. Here you will find useful information and tools to help you get the most out of your beautiful bouquet.<br>
+    <h2 id="subtitle">Discover the power.</h2>
+    <p>Resources available at your fingertips. Here you will find useful information and tools to help you get the most out of your beautiful bouquet.<br>
         Take a deep dive into flower power. Click on each link to find out more!</p>
     
     <ol>
         <li><b>What's a Rose?</b></li>
-            <ul>
-                <li><a href="https://www.britannica.com/plant/rose-plant">Roses Explained</a></li>
-            </ul><br>
+        <ul>
+            <li><a href="https://www.britannica.com/plant/rose-plant">Roses Explained</a></li>
+        </ul><br>
         <li><b>History of Rose</b></li>
-            <ul>
-                <li><a href="https://www.worldhistory.org/article/2264/a-brief-history-of-the-rose/">Journey of the Rose</a></li>
-            </ul><br>
+        <ul>
+            <li><a href="https://www.worldhistory.org/article/2264/a-brief-history-of-the-rose/">Journey of the Rose</a></li>
+        </ul><br>
         <li><b>The Goodness of Roses</b></li>
-            <ul>
-                <li><a href="https://itsblume.com/en-us/blogs/the-scoop/5-benefits-of-rose-petals-n-hips">Petals and Hips</a></li>
-            </ul>
+        <ul>
+            <li><a href="https://itsblume.com/en-us/blogs/the-scoop/5-benefits-of-rose-petals-n-hips">Petals and Hips</a></li>
+        </ul>
      </ol>
    
 
 <table style="border: 1px solid black">
     <thead>
-        <th>Benefits</th>
-        <th>How it works</th>
-        <th>Products</th>
+        <tr>
+            <th>Benefits</th>
+            <th>How it works</th>
+            <th>Products</th>
+        </tr>
 
     </thead>
-    <tr>
-        <td>
+    <tbody>
+        <tr>
+            <td>
             Mood Enhancer and Relaxation:
-        </td>
-        <td>
+            </td>
+            <td>
             Aesthetic floral arrangements<br>
             Soothing aroma
-        </td>
-        <td>
+            </td>
+            <td>
             Bath oils<br>
             Floral arrangements
-        </td>
-    </tr>
-    <tr>
-        <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
             Skin Health:
-        </td>
-        <td>
+            </td>
+            <td>
             Vitamin A,C and E for skin<br>
             Helps with fine lines and wrinkles
             Good for acne
-        </td>
-        <td>
+            </td>
+            <td>
             Rose oil<br>
             Rose water<br>
             Toner
-        </td>
-    <tr>
-        <td>
+            </td>
+        <tr>
+            <td>
             Antioxidant:
-        </td>
-        <td>
+            </td>
+            <td>
             Contains polyphenols that protect against cell damage<br>
             May reduce risk of some chronic diseases
-        </td>
-        <td>
+            </td>
+            <td>
           Rose tea
-        </td>
-    </tr>
-    <tr>
-        <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
             Immune System Support:
-        </td>
-        <td>
+            </td>
+            <td>
             Helps with respiratory issues and coughs
-        </td>
-        <td>
+            </td>
+            <td>
             Rose tea
-        </td>
-    </tr>
+            </td>
+        </tr>
  </table><br>
     <h2>~ Click image for inspiring quotes about roses ~</h2>
-<div></div>
-<a href="https://www.1800flowers.com/blog/flower-facts/rose-quotes/">
+
+    <a href="https://www.1800flowers.com/blog/flower-facts/rose-quotes/">
     <img src="roses_green_leaves.jpg" alt="roses_buy"></a><br>
+    <script>
+        //changes color and font for h2
+        var subtitle = document.getElementById("subtitle"); //assigns the html id to a variable
+        subtitle.setAttribute("style", "color: blue"); //setting subtitle element to blue
+        subtitle.style.fontStyle = 'italic'; //changes font of subtitle element to italic
+    </script>
+        
+    <script src="javascript.js"></script>
+    <script>
+        
+        //alert added when loading or reloading page
+        window.addEventListener('load', function() { //window is for browser, load is fired when the page is loaded. This function alerts when the page is loaded.
+            alert('Welcome to the Roses Resources page!');
+        });
+
+         // Alert pops up when clicking on image of rose
+         document.querySelector('img').addEventListener('click', function() {
+            alert('Enjoy these inspiring quotes about roses!');
+        });
 
 
+    </script>
+
+</body>
 </html>
 
 
