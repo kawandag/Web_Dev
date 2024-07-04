@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Results</title>
+    </head>
+
+    <body>
+
+        <h1>Your information has been submitted successfully <span id="n">???</span>!</h1>
+
+        <p>Thank you for submitting your information. We will contact you shortly.<br>
+            <span id="form">
+                <span><b>Email address is: </b><span id="e">??</span><br>
+                <span><b>Phone number: </b><span id="p"></span><br>
+                <span><b>Contact preference: </b><span id="c"></span><br>
+                <span><b>Subscribed:</b><span id="u"></span><br>
+                <span><b>Message: </b><span id="m"></span><br>
+                <span><b>State: </b><span id="s"></span>
+            </span>
+             </p>
+        <script>
+            // URL parameters
+            var url_string = window.location.search;
+            var params = new URLSearchParams(url_string);
+            var head = document.getElementById("n");
+           
+            var name = params.get("name");
+            n.innerHTML = name;
+
+         
+            var mail = document.getElementById("e");
+            var email = params.get("email");
+            e.innerHTML = email;
+           
+            var tele = document.getElementById("p");
+            var phone = params.get("phone");
+            p.innerHTML = phone;
+         
+            var cont = document.getElementById("c");
+            var contact = params.get("contact_preference");
+            c.innerHTML = contact;
+            
+           var mess = document.getElementById("m");            
+           var message = params.get("message");
+           m.innerHTML = message;
+
+           var sub = document.getElementById("u");
+           var subscribe = params.get("subscribe");
+           u.innerHTML = subscribe;
+
+                               
+           var stat = document.getElementById("s");
+           var state = params.get("select");
+           s.innerHTML = state;
+            
+        </script>
+    </body>
+</html>
